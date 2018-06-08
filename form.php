@@ -10,17 +10,15 @@ if(isset($_GET['terms'])){
     if($_GET['calctype']=='advanced'){
         if(empty($_GET["value_a"]) || empty($_GET["value_a"])){
            echo "<div>No value!</div>";
-        }
-        else{
+        }else{
             if($_GET["value_b"]==0){
-               $a=$_GET["value_a"];
-               $b=$_GET["value_b"];
+                $a=$_GET["value_a"];
+                $b=$_GET["value_b"];
                 $sum=$a+$b;
-               $dif=$a-$b;
+                $dif=$a-$b;
                 $mul=$a*$b;
                 echo $a."+".$b."=".$sum.".<br>".$a."-".$b."=".$dif.".<br>".$a."*".$b."=".$mul.".<br><a href='form.html'>Back to main page</a>";
-            }   
-            else if($_GET["value_b"]!=0){
+            }else if($_GET["value_b"]!=0){
                 $a=$_GET["value_a"];
                 $b=$_GET["value_b"];
                 $sum=$a+$b;
@@ -31,30 +29,18 @@ if(isset($_GET['terms'])){
                 echo "<a href='form.html'>Back to main page</a>";
             }
         }
-    }
-    if($_GET['calctype']=='basic'){
+    }if($_GET['calctype']=='basic'){
         if(empty($_GET["value_a"]) || empty($_GET["value_a"])){
             echo "<div>No value!</div>";
-        }
-        else{
-            if($_GET["value_b"]==0){
+        }else{
                 $a=$_GET["value_a"];
                 $b=$_GET["value_b"];
                 $sum=$a+$b;
                 $dif=$a-$b;
-                echo $a."+".$b."=".$sum.".<br>".$a."-".$b."=".$dif.".<br><a href='form.html'>Back to main page</a>";
-            }   
-            else if($_GET["value_b"]!=0){
-                $a=$_GET["value_a"];
-                $b=$_GET["value_b"];
-                $sum=$a+$b;
-                $dif=$a-$b;
-                echo $a."+".$b."=".$sum.".<br>".$a."-".$b."=".$dif.".<br><a href='form.html'>Back to main page</a>";
-            }
+                echo $a."+".$b."=".$sum.".<br>".$a."-".$b."=".$dif.".<br><a href='form.html'>Back to main page</a>"; 
         }
     }
-}
-else{
+}else{
     echo "<div>You must agree with terms and conditions!</div><a href='form.html'>Back to main page</a>";
 }
 ?>
